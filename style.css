@@ -8,7 +8,7 @@
     border: none;
     outline: none;
     font-family: 'Poppins', sans-serif;
-    outline: 1px solid blue;
+    /* outline: 1px solid blue; */
 }
 
 html {
@@ -70,7 +70,7 @@ nav a.active {
     position: relative;
 }
 
-@media(max-width:995px) {
+@media(max-width:900px) {
     nav {
         position: fixed;
         display: none;
