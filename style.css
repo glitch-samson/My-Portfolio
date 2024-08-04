@@ -70,7 +70,7 @@ nav a.active {
     position: relative;
 }
 
-@media(max-width:900px) {
+@media(max-width:895px) {
     nav {
         position: fixed;
         display: none;
@@ -104,6 +104,7 @@ nav a.active {
 
     .hamburger {
         display: block;
+        display: inline;
     }
 }
 
@@ -162,8 +163,8 @@ span {
     display: inline-flex;
     justify-content: center;
     align-items: center;
-    width: 2.5rem;
-    height: 2.5rem;
+    width: 3.5rem;
+    height: 3rem;
     background-color: transparent;
     border: 0.2rem solid red;
     font-size: 1.5rem;
@@ -213,12 +214,13 @@ span {
     content: "Web Developer";
     color: red;
     animation: words 15s infinite;
+    font-size: 2rem;
 }
 
 .typing-text span::after {
     content: "";
     background-color: black;
-    position: absolute;
+    position: relative;
     width: calc(100% + 8px);
     height: 100%;
     border-left: 3px solid black;
@@ -250,13 +252,13 @@ span {
     }
 }
 
-@media(max-width:1000px) {
+@media(max-width:900px) {
     .home {
         gap: 4rem;
     }
 }
 
-@media(max-width:950px) {
+@media(max-width:900px) {
     .home {
         flex-direction: column;
         margin: 5rem 4rem;
@@ -278,10 +280,16 @@ span {
     }
 }
 
-/* .services {
-    background-color: red;
+.services {
+    background-color:black;
     min-height: 100vh;
     text-align: center;
+}
+.services h2{
+    font-size: 4rem;
+    font-weight: 400;
+    padding-bottom: 5rem;
+    color: red;
 }
 
 .services-container {
@@ -291,12 +299,34 @@ span {
     gap: 1.2rem;
 }
 .service-box{
-    display: flex;
+    background-color: red;
+    height: 300px;
+    border-radius: 3rem;
+    cursor: pointer;
+    transition: 0.3 ease;
+    padding: 1.5rem;
+    /* display: flex;
     flex-direction: column;
     text-align: left;
     max-height: 200px;
     justify-content: center;
     align-items: center;
+    padding: 5rem; */
+}
+
+.service-box:hover{
+    background: black;
+    color: red;
+    transform: scale(1.03);
+    border: 1px solid red;
+}
+.service-box.service-info{
+    display: flex;
+    flex-direction: column;
+    text-align: left;
+    max-height: 200px;
+    justify-content: center;
+    align-items: baseline;
     padding: 5rem;
 }
 
@@ -310,4 +340,23 @@ span {
     font-weight: 200;
     max-height: 100px;
     margin: auto;
-} */
+}
+
+@media(max-width:991px){
+    .section{
+        padding: 10rem 3% 7rem;
+    }
+    .services{
+        padding-bottom: 7rem;
+    }
+
+}
+@media(max-width:895px){
+    .services h2{
+        margin-bottom: 3rem;
+    }
+
+    .services-container{
+        grid-template-columns: repeat(1, 1fr);
+    }
+}
