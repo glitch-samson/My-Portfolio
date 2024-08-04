@@ -214,7 +214,7 @@ span {
     content: "Web Developer";
     color: red;
     animation: words 15s infinite;
-    font-size: 2rem;
+    font-size: 4rem;
 }
 
 .typing-text span::after {
@@ -305,13 +305,7 @@ span {
     cursor: pointer;
     transition: 0.3 ease;
     padding: 1.5rem;
-    /* display: flex;
-    flex-direction: column;
-    text-align: left;
-    max-height: 200px;
-    justify-content: center;
-    align-items: center;
-    padding: 5rem; */
+
 }
 
 .service-box:hover{
@@ -360,3 +354,393 @@ span {
         grid-template-columns: repeat(1, 1fr);
     }
 }
+
+
+
+
+
+
+.skills{
+    max-width: 100vw;
+}
+
+.skills .heading {
+    font-size: 4rem;
+    font-weight: 400;
+    padding-bottom: 5rem;
+    color: red;
+    text-align: center;
+}
+
+.skills .container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.skills .row {
+    display: flex;
+    flex-direction: row;
+    gap: 2rem;
+    background: rgba(255, 38, 0, 0.269);
+    justify-content: center;
+}
+
+.skills .bar {
+    background-color: black;
+    padding: 2rem;
+    border-radius: 1rem;
+    box-shadow: 0 0 15px rgba(0, 0, 0, 0.5);
+    transition: 0.3s ease;
+    margin: 2rem;
+    
+}
+
+.skills .bar:hover {
+    transform: scale(1.1);
+    box-shadow: 0 0 25px rgba(255, 0, 0, 0.5);
+}
+
+.skills .info {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 1rem;
+}
+
+.skills .info img {
+    width: 100px;
+    height: 100px;
+    object-fit: cover;
+    border-radius: 0.5rem;
+}
+
+.skills .info span {
+    font-size: 1.5rem;
+    color: white;
+}
+@media (max-width: 900px) {
+    .skills .row {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .skills .bar {
+        width: 80%;
+    }
+}
+
+
+
+
+
+
+.education {
+    padding: 50px 0;
+    background-color: black;
+    position: relative;
+}
+
+.education .heading {
+    text-align: center;
+    font-size: 3rem;
+    color: white;
+    margin-bottom: 50px;
+    position: relative;
+}
+
+.education .heading span {
+    color: red;
+}
+
+.timeline {
+    position: relative;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.containers {
+    padding: 10px 40px;
+    position: relative;
+    background-color: red;
+    width: 45%;
+    margin: 20px 0;
+}
+
+.containers::after {
+    content: '';
+    position: absolute;
+    width: 25px;
+    height: 25px;
+    right: -12.5px;
+    background-color: white;
+    border: 4px solid red;
+    top: 15px;
+    border-radius: 50%;
+    z-index: 1;
+}
+
+.containers.right::before {
+    content: " ";
+    height: 0;
+    position: absolute;
+    top: 22px;
+    width: 0;
+    z-index: 1;
+    right: 30px;
+    border: medium solid red;
+    border-width: 10px 0 10px 10px;
+    border-color: transparent transparent transparent red;
+}
+
+.containers.left::before {
+    content: " ";
+    height: 0;
+    position: absolute;
+    top: 22px;
+    width: 0;
+    z-index: 1;
+    left: 30px;
+    border: medium solid red;
+    border-width: 10px 10px 10px 0;
+    border-color: transparent red transparent transparent;
+}
+
+.containers.right {
+    left: 55%;
+}
+
+.container.left {
+    left: 0;
+}
+
+.containers .content {
+    padding: 20px 30px;
+    background-color: black;
+    position: relative;
+    border-radius: 6px;
+}
+
+.containers .tag h2{
+    font-size: 2rem;
+    margin-bottom: 0rem;
+}
+
+.containers .tag {
+    position: absolute;
+    top: -18px;
+    right: 10px;
+    color: black;
+    background-color: red;
+    padding: 5px 10px;
+    border-radius: 4px;
+}
+
+.containers .left .tag {
+    left: 10px;
+    right: auto;
+}
+
+@media (max-width: 768px) {
+    .containers {
+        width: 100%;
+        padding-left: 70px;
+        padding-right: 25px;
+    }
+
+    .containers.right {
+        left: 0%;
+    }
+
+    .containers.left::before,
+    .containers.right::before {
+        left: 60px;
+        border: medium solid red;
+        border-width: 10px 10px 10px 0;
+        border-color: transparent red transparent transparent;
+    }
+
+    .containers::after {
+        left: 30px;
+        top: 15px;
+    }
+}
+
+
+
+.containeri {
+    background-color: red;
+    padding: 20px 40px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    border-radius: 10px;
+    width: 50%;
+    margin: auto;
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+}
+
+h2 {
+    margin-bottom: 20px;
+    color: black;
+    font-size: 4rem;
+    text-align: center;
+}
+
+label {
+    margin-bottom: 5px;
+    color: black;
+    font-size: 1.5rem;
+    font-weight: 500;
+}
+
+input, textarea {
+    margin-bottom: 15px;
+    padding: 10px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    font-size: 16px;
+}
+
+button {
+    padding: 10px;
+    background-color: white;
+    color: red;
+    border: none;
+    border-radius: 5px;
+    font-size: 16px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+button:hover {
+    background-color: black;
+    color: red;
+    font-size: 2rem;
+    font-weight: 500;
+}
+
+
+
+
+.footer{
+    position: relative;
+    bottom: 0;
+    width: 100%;
+    padding: 40px 0;
+    background-color: red;
+
+}
+
+.footer .social{
+    text-align: center;
+    padding-bottom: 25px;
+    color: black;
+}
+
+.footer .social a {
+    font-size: 25px;
+    color: black;
+    border: 2px solid black;
+    width: 42px;
+    height: 42px;
+    line-height: 42px;
+    display: inline-block;
+    text-align: center;
+    border-radius: 50%;
+    margin: 0 10px;
+    transition: 0.3s ease;
+}
+
+.footer .social a:hover{
+    transform: scale(1.2)translateY(-5px);
+    background: black;
+    color: red;
+}
+
+.footer ul{
+    top: 0;
+    padding: 0;
+    font-size: 18px;
+    line-height: 1.8;
+    margin-bottom: 0;
+    text-align: center;
+}
+
+.footer ul li a{
+    color: black;
+    border-bottom: 3px solid transparent;
+    transition: 0.3s ease;
+}
+
+.footer ul li a:hover{
+    border-bottom: 3px solid black;
+}
+
+.footer ul li{
+    display: inline-block;
+    padding: 0 15px;
+}
+
+.footer .copywrite{
+    margin-top: 50px;
+    text-align: center;
+    font-size: 16px;
+    color: black;
+}
+
+@media(max-width:1200px){
+    html{
+        font-size: 55%;
+    }
+    .services-container{
+        padding-bottom: 7rem;
+        grid-template-columns: repeat(2, 1fr);
+        margin: 0.5rem;
+    }
+}
+
+@media(max-width:900px){
+    .header{
+        padding: 2rem 3%;
+    }
+    section{
+        padding: 10rem 3% 2rem;
+
+    }
+
+    .services{
+        padding-bottom: 7rem;
+    }
+
+    .footer{
+        padding: 2rem 3%;
+    }
+}
+
+@media (max-width: 768px) {
+    .containeri {
+        padding: 20px 20px; /* Reduce padding on smaller screens */
+    }
+
+    input, textarea {
+        font-size: 14px; /* Slightly smaller font size for smaller screens */
+    }
+
+    button {
+        font-size: 14px; /* Slightly smaller font size for smaller screens */
+    }
+}
+
+
+
+
+
+
+
+
+
+
+
