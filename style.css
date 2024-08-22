@@ -23,12 +23,13 @@ body {
 
 header {
     margin-top: 20px;
-    position: absolute;
+    position: fixed;
     top: 0;
     left: 0;
     width: 100%;
     padding: 0.1rem 5%;
-    background-color: transparent;
+    margin-top: 0;
+    background-color: black;
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -71,6 +72,10 @@ nav a.active {
 }
 
 @media(max-width:895px) {
+
+    .header{
+        position: fixed;
+    }
     nav {
         position: fixed;
         display: none;
@@ -105,6 +110,13 @@ nav a.active {
     .hamburger {
         display: block;
         display: inline;
+        width: 30px;
+        height: 30px;
+        background-image: url('hamburger-icon.png');
+        cursor: pointer;
+    }
+    .hamburger.cancel {
+        background-image: url('cancel-icon.png');
     }
 }
 
@@ -163,11 +175,15 @@ span {
     display: inline-flex;
     justify-content: center;
     align-items: center;
-    width: 3.5rem;
-    height: 3rem;
+    width: 4.5rem;
+    height: 4rem;
+    margin: 1px;
+    margin-bottom: 1rem;
+    margin-top: 1rem;
+    margin-right: 1rem;
     background-color: transparent;
     border: 0.2rem solid red;
-    font-size: 1.5rem;
+    font-size: 2rem;
     border-radius: 50%;
     transition: 0.3s ease;
     color: red;
@@ -437,8 +453,9 @@ span {
 
 .education {
     padding: 50px 0;
-    background-color: black;
+    background-color: red;
     position: relative;
+    margin-top: 10rem;
 }
 
 .education .heading {
@@ -447,10 +464,12 @@ span {
     color: white;
     margin-bottom: 50px;
     position: relative;
+    
 }
 
 .education .heading span {
-    color: red;
+    color: black;
+    padding-left: 10px;
 }
 
 .timeline {
@@ -564,6 +583,11 @@ span {
         left: 30px;
         top: 15px;
     }
+
+    
+
+
+    
 }
 
 
@@ -583,7 +607,7 @@ form {
 }
 
 h2 {
-    margin-bottom: 20px;
+    margin-bottom: 5px;
     color: black;
     font-size: 4rem;
     text-align: center;
@@ -602,24 +626,32 @@ input, textarea {
     border: 1px solid #ddd;
     border-radius: 5px;
     font-size: 16px;
+    width: rem;
+    
 }
 
 button {
-    padding: 10px;
-    background-color: white;
+    padding: 5px;
+    width: 200px;
+    height: 50px;
+    margin-top: 5px;
+    background-color: black;
     color: red;
     border: none;
     border-radius: 5px;
     font-size: 16px;
     cursor: pointer;
-    transition: background-color 0.3s ease;
+    transition: background-color 1s ease;
+    align-self: center;
 }
 
 button:hover {
     background-color: black;
+    width: 220px;
+    height: 55px;
     color: red;
     font-size: 2rem;
-    font-weight: 500;
+    font-weight: 600;
 }
 
 
@@ -699,6 +731,54 @@ button:hover {
         padding-bottom: 7rem;
         grid-template-columns: repeat(2, 1fr);
         margin: 0.5rem;
+    }
+    .containeri {
+        background-color: red;
+        padding: 20px 40px;
+        box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        border-radius: 10px;
+        width: 70%;
+        margin: auto;
+    }
+    
+    form {
+        display: flex;
+        flex-direction: column;
+    }
+    
+    h2 {
+        margin-bottom: 5px;
+        color: black;
+        font-size: 4rem;
+        text-align: center;
+    }
+    
+    label {
+        margin-bottom: 5px;
+        color: black;
+        font-size: 1.5rem;
+        font-weight: 500;
+    }
+    
+    input, textarea {
+        margin-bottom: 15px;
+        padding: 5px;
+        border: 1px solid #ddd;
+        border-radius: 5px;
+        font-size: 16px;
+    }
+    
+    button {
+        padding: 5px;
+        width: 100px;
+        margin-top: 5px;
+        background-color: black;
+        color: red;
+        border: none;
+        border-radius: 5px;
+        font-size: 16px;
+        cursor: pointer;
+        transition: background-color 0.3s ease;
     }
 }
 
